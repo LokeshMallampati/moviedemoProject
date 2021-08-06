@@ -1,0 +1,30 @@
+const mongoose = require('mongoose');
+
+const PostSchema = mongoose.Schema({
+    name:{
+        type:String,
+        required :true
+    },
+    genere:{
+        type:String,
+        required :true
+    },
+    description:{
+        type:String,
+        required :true
+    },
+    caseandcrew:{
+        type:String,
+        required:true
+    },
+    availableforrent:{
+        type:String,
+        required:true
+    },
+    rentCharge:{
+        type:Number,
+        required:true
+    }
+});
+
+module.exports = mongoose.model('Posts',PostSchema);
